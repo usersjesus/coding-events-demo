@@ -6,9 +6,21 @@
 <header th:replace="fragments :: header"></header>
 
 <ul>
+    <label>ID
+        <th:block th:each="event : ${events}">
+            <li th:text="${event.id}"></li>
+        </th:block>
+    </label>
+    <label>Name
     <th:block th:each="event : ${events}">
-        <li th:text="${event}"></li>
+        <li th:text="${event.name}"></li>
     </th:block>
+    </label>
+    <label>Description
+    <th:block th:each="event : ${events}">
+        <li th:text="${event.description}"></li>
+    </th:block>
+    </label>
 </ul>
 
 </body>
